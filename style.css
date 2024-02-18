@@ -1,0 +1,108 @@
+* {
+    /* coloca-se esse padrão sempre noscomeços dos projetos para não desprogramar toda a pagina, como distanciamento */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    /* distanciamento da logo e dos textos para a margem */
+    padding-top: 20px;
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+.conteudo {
+    width: 100%;
+    /* vai ocupar 100% da largura do conteudo do html*/
+    display: flex;
+    /* adicionando esse item, consigo usar varias funcionalidades abaixo */
+    justify-content: space-between;
+    /* justify significa organizar o texto, se e mais pra esquerda, centro ou direita, o between pega todo conteudo e cria um espaço em cada item */
+    align-items: center;
+    /* centralizar os itens do conteudo */
+
+}
+
+.caixa-texto {
+    width: 600px;
+}
+
+.caixa-imagem {
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    /* jogar a imagem para o final */
+    margin-top: 250px;
+    /* descer o copo um pouco para baixo */
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    background-color: #017143;
+    /* cor de fundo*/
+    color: #ffff;
+    /* cor da letra*/
+    border: none;
+    /* border sign. borda, none sign. sem */
+    padding: 10px;
+    /* alargamento do item, que e o botao */
+    border-radius: 20px;
+    /* arredondamento do item, que e o botão */
+}
+
+h2 {
+    /* h2 e a fonte maior */
+    font-size: 60px;
+    /* tamanho da fonte */
+    font-weight: 500px;
+    /* grossura da fonte */
+}
+
+span {
+    color: #017143;
+    font-size: 70px;
+    font-weight: 900px;
+}
+
+p {
+    /* p e a fonte menor */
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.logo {
+    /* logo e o apelido , formatado no index no nome class, ira mudar o tamanho individual de cada class*/
+    width: 80px;
+}
+
+.starbucks {
+    width: 340px;
+    z-index: 2;  /* define a posição de algum elemento, se fica na frente de outro ou atras, nesse casso , o copo tem que ficar na frente do circulo verde */
+}
+
+.copo-pequeno {
+    width: 60px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.copo-pequeno:hover {
+    transform: translateY(-35px);
+}
+
+.circulo {
+    background: #017143;
+    width: 100%;
+    height: 100%;
+    position: absolute;  /* controle absoluto onde o objeto vai ficar na tela, qual a posição */
+    top: 0%;  /* toda pra cima */
+    left: 0%;  /* toda para a esquerda */
+    clip-path: circle(600px at right 800px);  /* recoetar a div onde eu quero, digito circule e coloco a posição dentro do parentese*/
+}
